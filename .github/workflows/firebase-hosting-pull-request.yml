@@ -37,6 +37,12 @@ jobs:
         run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: 1
+          NEXT_PUBLIC_FIREBASE_API_KEY: ${{ secrets.NEXT_PUBLIC_FIREBASE_API_KEY }}
+          NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN: pi11ar-738d4.firebaseapp.com
+          NEXT_PUBLIC_FIREBASE_PROJECT_ID: pi11ar-738d4
+          NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET: pi11ar-738d4.appspot.com
+          NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID: 618698706011
+          NEXT_PUBLIC_FIREBASE_APP_ID: ${{ secrets.NEXT_PUBLIC_FIREBASE_APP_ID }}
         
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
